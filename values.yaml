@@ -55,7 +55,7 @@ service:
   # type, selector or ports entries.
   spec: {}
     # externalTrafficPolicy: Cluster
-    # loadBalancerIp: "1.2.3.4"
+    # loadBalancerIP: "1.2.3.4"
     # clusterIP: "2.3.4.5"
 
 dashboard:
@@ -65,7 +65,7 @@ dashboard:
   # Expose the dashboard and api through an ingress route at /dashboard
   # and /api This is not secure and SHOULD NOT be enabled on production
   # deployments
-  ingressRoute: true
+  ingressRoute: false
 
 logs:
   loglevel: WARN
@@ -77,5 +77,6 @@ resources: {}
   # limits:
   #   cpu: "300m"
   #   memory: "150Mi"
+affinity: {}
 nodeSelector: {}
 tolerations: []
